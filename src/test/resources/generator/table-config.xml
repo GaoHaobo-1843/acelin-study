@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!-- clean mybatis-generator:generate -P table -->
+
+    <context id="test" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="${mapper.mapper}"/>
+        </plugin>
+
+<!--        <jdbcConnection driverClass="oracle.jdbc.OracleDriver"-->
+<!--                        connectionURL="jdbc:oracle:thin:@(DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = 172.18.238.233)(PORT = 1638))) (CONNECT_DATA = (SERVICE_NAME = billdbkf)))"-->
+<!--                        userId="dbaccopr"-->
+<!--                        password="Sitech#2019">-->
+<!--        </jdbcConnection>-->
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://172.18.233.159:8066/acctdb?useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8"
+                        userId="point"
+                        password="abc123">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="${targetModelPackage}" targetProject="${targetJavaProject}"/>
+
+        <sqlMapGenerator targetPackage="${targetXMLPackage}" targetProject="${targetResourcesProject}"/>
+
+        <javaClientGenerator targetPackage="${targetMapperPackage}" targetProject="${targetJavaProject}"
+                             type="XMLMAPPER"/>
+
+
+     <!-- 需要生成的表 -->
+        <!--<table tableName="BAL_WLWINVRECORD_INFO" ></table>-->
+<!--        <table tableName="bal_batchadj_his" schema="dbaccopr"></table>-->
+        <table tableName="bal_invprint_202101" ></table>
+
+
+
+    </context>
+</generatorConfiguration>

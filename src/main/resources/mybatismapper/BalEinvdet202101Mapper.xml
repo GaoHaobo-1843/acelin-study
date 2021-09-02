@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gaohb.hello.study.tmp.BalEinvdet202101Mapper" >
+  <resultMap id="BaseResultMap" type="com.gaohb.hello.study.tmp.BalEinvdetYM" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="order_sn" property="orderSn" jdbcType="VARCHAR" />
+    <result column="ddh" property="ddh" jdbcType="VARCHAR" />
+    <result column="fwm" property="fwm" jdbcType="VARCHAR" />
+    <result column="ewm" property="ewm" jdbcType="VARCHAR" />
+    <result column="kplx" property="kplx" jdbcType="CHAR" />
+    <result column="pdf_url" property="pdfUrl" jdbcType="VARCHAR" />
+    <result column="wt_pdf_url" property="wtPdfUrl" jdbcType="VARCHAR" />
+    <result column="hbase_rowkey" property="hbaseRowkey" jdbcType="VARCHAR" />
+    <result column="unit_name" property="unitName" jdbcType="VARCHAR" />
+    <result column="show_name" property="showName" jdbcType="VARCHAR" />
+    <result column="msg_recv_phone" property="msgRecvPhone" jdbcType="VARCHAR" />
+    <result column="recv_email" property="recvEmail" jdbcType="VARCHAR" />
+    <result column="bak1" property="bak1" jdbcType="VARCHAR" />
+    <result column="bak2" property="bak2" jdbcType="VARCHAR" />
+    <result column="nsrsbh" property="nsrsbh" jdbcType="VARCHAR" />
+    <result column="ghfdz" property="ghfdz" jdbcType="VARCHAR" />
+    <result column="ghfyhzh" property="ghfyhzh" jdbcType="VARCHAR" />
+    <result column="bak3" property="bak3" jdbcType="VARCHAR" />
+    <result column="bak4" property="bak4" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

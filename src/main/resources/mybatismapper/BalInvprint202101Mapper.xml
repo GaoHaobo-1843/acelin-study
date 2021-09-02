@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gaohb.hello.study.tmp.BalInvprint202101Mapper" >
+  <resultMap id="BaseResultMap" type="com.gaohb.hello.study.tmp.BalInvprintYM" >
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <result column="print_sn" property="printSn" jdbcType="BIGINT" />
+    <result column="print_array" property="printArray" jdbcType="SMALLINT" />
+    <result column="phone_no" property="phoneNo" jdbcType="VARCHAR" />
+    <result column="cust_id" property="custId" jdbcType="BIGINT" />
+    <result column="id_no" property="idNo" jdbcType="BIGINT" />
+    <result column="contract_no" property="contractNo" jdbcType="BIGINT" />
+    <result column="bill_cycle" property="billCycle" jdbcType="INTEGER" />
+    <result column="inv_no" property="invNo" jdbcType="VARCHAR" />
+    <result column="inv_code" property="invCode" jdbcType="VARCHAR" />
+    <result column="tcm_code" property="tcmCode" jdbcType="VARCHAR" />
+    <result column="inv_rel_no" property="invRelNo" jdbcType="VARCHAR" />
+    <result column="state" property="state" jdbcType="CHAR" />
+    <result column="inv_type" property="invType" jdbcType="CHAR" />
+    <result column="pay_sn" property="paySn" jdbcType="BIGINT" />
+    <result column="total_fee" property="totalFee" jdbcType="BIGINT" />
+    <result column="tax_rate" property="taxRate" jdbcType="REAL" />
+    <result column="tax_fee" property="taxFee" jdbcType="BIGINT" />
+    <result column="print_fee" property="printFee" jdbcType="BIGINT" />
+    <result column="print_num" property="printNum" jdbcType="SMALLINT" />
+    <result column="login_no" property="loginNo" jdbcType="VARCHAR" />
+    <result column="group_id" property="groupId" jdbcType="VARCHAR" />
+    <result column="op_code" property="opCode" jdbcType="CHAR" />
+    <result column="total_date" property="totalDate" jdbcType="INTEGER" />
+    <result column="op_time" property="opTime" jdbcType="TIMESTAMP" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="order_sn" property="orderSn" jdbcType="VARCHAR" />
+    <result column="data_source" property="dataSource" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>
