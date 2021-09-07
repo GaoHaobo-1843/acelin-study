@@ -100,6 +100,20 @@
             <version>${mapper.version}</version>
         </dependency>
 
+<!--        &lt;!&ndash; rabbitmq &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.rabbitmq</groupId>-->
+<!--            <artifactId>amqp-client</artifactId>-->
+<!--            <version>5.7.1</version>-->
+<!--        </dependency>-->
+
+        <!-- rabbitmq template -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
+
+
     </dependencies>
 
     <build>
