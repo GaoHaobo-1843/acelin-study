@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c8750ea2-9a26-460c-b1d8-bf83f1095c5a" name="Default Changelist" comment="移除不必要版本控制">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gaohb/hello/study/config/rabbitmq/DirectRabbitConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gaohb/hello/study/config/rabbitmq/RabbitMQConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gaohb/hello/study/springTest/amqp/rabbitmq/DirectReceiver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gaohb/hello/study/springTest/amqp/rabbitmq/HelloRabbitMQ.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gaohb/hello/study/springTest/amqp/rabbitmq/SendMessageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/gaohb/hello/study/springTest/amqp/RabbitMQTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/gaohb/hello/study/springTest/aop/AspectControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gaohb/hello/study/springTest/aop/AspectControllerTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Program Files\Maven\apache-maven-3.6.3\repository" />
+        <option name="mavenHome" value="D:\Program Files\Maven\apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\Program Files\Maven\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1xa8GDgwH39CPI5TNihbPNtBIwu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\work\study\acelin-study" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.StudyApplication">
+    <configuration name="RabbitMQTest.producer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gaohb.hello.study.springTest.amqp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gaohb.hello.study.springTest.amqp" />
+      <option name="MAIN_CLASS_NAME" value="com.gaohb.hello.study.springTest.amqp.RabbitMQTest" />
+      <option name="METHOD_NAME" value="producer" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RabbitMQTest.wq_consumer1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gaohb.hello.study.springTest.amqp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gaohb.hello.study.springTest.amqp" />
+      <option name="MAIN_CLASS_NAME" value="com.gaohb.hello.study.springTest.amqp.RabbitMQTest" />
+      <option name="METHOD_NAME" value="wq_consumer1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RabbitMQTest.wq_consumer2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gaohb.hello.study.springTest.amqp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gaohb.hello.study.springTest.amqp" />
+      <option name="MAIN_CLASS_NAME" value="com.gaohb.hello.study.springTest.amqp.RabbitMQTest" />
+      <option name="METHOD_NAME" value="wq_consumer2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RabbitMQTest.wq_producer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gaohb.hello.study.springTest.amqp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gaohb.hello.study.springTest.amqp" />
+      <option name="MAIN_CLASS_NAME" value="com.gaohb.hello.study.springTest.amqp.RabbitMQTest" />
+      <option name="METHOD_NAME" value="wq_producer" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" singleton="false" temporary="true" nameIsGenerated="true">
+      <module name="study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gaohb.hello.study.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.gaohb.hello.study.StudyApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.RabbitMQTest.producer" />
+      <item itemvalue="JUnit.RabbitMQTest.wq_consumer1" />
+      <item itemvalue="JUnit.RabbitMQTest.wq_consumer2" />
+      <item itemvalue="JUnit.RabbitMQTest.wq_producer" />
+      <item itemvalue="Spring Boot.StudyApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.StudyApplication" />
+        <item itemvalue="JUnit.RabbitMQTest.wq_consumer2" />
+        <item itemvalue="JUnit.RabbitMQTest.wq_consumer1" />
+        <item itemvalue="JUnit.RabbitMQTest.wq_producer" />
+        <item itemvalue="JUnit.RabbitMQTest.producer" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c8750ea2-9a26-460c-b1d8-bf83f1095c5a" name="Default Changelist" comment="" />
+      <created>1630581741415</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1630581741415</updated>
+      <workItem from="1630581742788" duration="79000" />
+      <workItem from="1630581830535" duration="707000" />
+      <workItem from="1630810319839" duration="212000" />
+      <workItem from="1630810548032" duration="14017000" />
+      <workItem from="1630911954629" duration="3031000" />
+      <workItem from="1630921667985" duration="2390000" />
+      <workItem from="1630999197973" duration="748000" />
+      <workItem from="1630999966935" duration="476000" />
+    </task>
+    <task id="LOCAL-00001" summary="set git ignore">
+      <created>1630999402838</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1630999402838</updated>
+    </task>
+    <task id="LOCAL-00002" summary="移除不必要的版本控制">
+      <created>1630999771641</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1630999771641</updated>
+    </task>
+    <task id="LOCAL-00003" summary="移除不必要的版本控制">
+      <created>1630999989404</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1630999989404</updated>
+    </task>
+    <task id="LOCAL-00004" summary="rabbitmq 连接相关配置">
+      <created>1631000088845</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1631000088845</updated>
+    </task>
+    <task id="LOCAL-00005" summary="移除不必要版本控制">
+      <created>1631000146510</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1631000146510</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="set git ignore" />
+    <MESSAGE value="移除不必要的版本控制" />
+    <MESSAGE value="rabbitmq 连接相关配置" />
+    <MESSAGE value="移除不必要版本控制" />
+    <option name="LAST_COMMIT_MESSAGE" value="移除不必要版本控制" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/gaohb/hello/study/config/rabbitmq/RabbitMQConfig.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
