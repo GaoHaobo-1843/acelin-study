@@ -1,0 +1,18 @@
+# IntelliJ project files
+*.idea
+*.iml
+out
+gen
+*.DS_Store
+target/
+*.log
+#*.properties
+
+# ignore Eclipse files
+.settings/
+build/
+.project
+.classpath
+source/com/sitech/acctmgr/mytest/
+
+
