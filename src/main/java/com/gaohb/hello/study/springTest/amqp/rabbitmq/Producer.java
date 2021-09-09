@@ -73,11 +73,20 @@ public class Producer {
 
         Map<String, Object> map = new HashMap<>();
         map.put("messageId", String.valueOf(UUID.randomUUID()));
-        map.put("messageData", message);
+        map.put("messageData", message + "TEST1");
 
         /* 直接跟交换机MY_FANOUT_EXCHANGE交互 */
-        rabbitTemplate.setExchange(DirectRabbitConfig.MY_FANOUT_EXCHANGE);
-        rabbitTemplate.convertAndSend(map);
+        rabbitTemplate.setExchange(DirectRabbitConfig.MY_TOPIC_EXCHANGE);
+        rabbitTemplate.convertAndSend(DirectRabbitConfig.TOPIC_ROUTING_KEY_ONE,map);
+
+        map.put("messageId", String.valueOf(UUID.randomUUID()));
+        map.put("messageData", message + "TEST2");
+        rabbitTemplate.convertAndSend(DirectRabbitConfig.TOPIC_ROUTING_KEY_TWO,map);
+
+        map.put("messageId", String.valueOf(UUID.randomUUID()));
+        map.put("messageData", message + "TEST3");
+        rabbitTemplate.convertAndSend(DirectRabbitConfig.TOPIC_ROUTING_KEY_THREE,map);
+
         return "ok";
     }
 }
