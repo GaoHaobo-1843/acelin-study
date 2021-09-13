@@ -1,4 +1,4 @@
-package com.gaohb.hello.study.springTest.amqp.rabbitmq;
+package com.gaohb.hello.study.springTest.rabbitmq;
 
 
 import com.gaohb.hello.study.config.rabbitmq.DirectRabbitConfig;
@@ -87,6 +87,23 @@ public class Producer {
         map.put("messageData", message + "TEST3");
         rabbitTemplate.convertAndSend(DirectRabbitConfig.TOPIC_ROUTING_KEY_THREE,map);
 
+        return "ok";
+    }
+
+
+    /**
+     * 【ack】
+     * @param message 消息内容
+     **/
+    @PostMapping("/ack/{message}")
+    public String ackMessage(@PathVariable("message") String message) {
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("messageId", String.valueOf(UUID.randomUUID()));
+        map.put("messageData", message);
+
+        /* 设置路由标识MY_ROUTING_KEY，发送到交换机MY_DIRECT_EXCHANGE */
+        rabbitTemplate.convertAndSend(DirectRabbitConfig.MY_DIRECT_EXCHANGE,DirectRabbitConfig.ROUTING_KEY_ACK, map);
         return "ok";
     }
 }

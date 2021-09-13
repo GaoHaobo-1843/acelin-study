@@ -2,7 +2,7 @@ package com.gaohb.hello.study.springTest.redis;
 
 import com.alibaba.fastjson.JSONObject;
 import com.gaohb.hello.study.config.redis.properties.MyRedisProperties;
-import com.gaohb.hello.study.config.MyProperties;
+import com.gaohb.hello.study.config.test.MyProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
-import java.io.Serializable;
 
 @RestController
 //@EnableConfigurationProperties(MyProperties.class)

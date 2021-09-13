@@ -1,4 +1,4 @@
-package com.gaohb.hello.study.springTest.amqp.rabbitmq;
+package com.gaohb.hello.study.springTest.rabbitmq;
 
 
 import com.gaohb.hello.study.config.base.Base;

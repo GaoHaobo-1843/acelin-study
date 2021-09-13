@@ -13,6 +13,7 @@ public class DirectRabbitConfig {
     public static final String MY_TOPIC_EXCHANGE = "myTopicExchange";                // Topic交换机名称
 
     public static final String ROUTING_KEY_ONE = "direct.routing-key-1";             // direct路由标识1
+    public static final String ROUTING_KEY_ACK = "direct.routing-key-ack";           // ack测试direct路由标识
     public static final String ROUTING_KEY_TWO = "topic.routing-key.*";              // topic路由匹配1
     public static final String ROUTING_KEY_THREE = "topic.routing-key.#";            // topic路由匹配2
 
@@ -59,9 +60,13 @@ public class DirectRabbitConfig {
 
     @Bean
     public Binding bindingDirectTwo() {
-        return BindingBuilder.bind(directQueueTwo()).to(directExchange()).with(ROUTING_KEY_ONE);
+        return BindingBuilder.bind(directQueueTwo()).to(directExchange()).with(ROUTING_KEY_ACK);
     }
 
+    @Bean
+    public Binding bindingDirectThree() {
+        return BindingBuilder.bind(directQueueThree()).to(directExchange()).with(ROUTING_KEY_ACK);
+    }
     /******************************* Fanout ******************************/
 
     @Bean

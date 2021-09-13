@@ -1,4 +1,4 @@
-package com.gaohb.hello.study.config;
+package com.gaohb.hello.study.config.test;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
