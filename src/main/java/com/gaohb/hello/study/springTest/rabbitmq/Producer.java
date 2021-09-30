@@ -20,19 +20,31 @@ public class Producer {
     RabbitTemplate rabbitTemplate;
 
     /**
-     * 【工作队列】模式
+     * 【点对点模式】
+     * @param task 消息内容
+     **/
+    @PostMapping("/peer-to-peer/{task}")
+    public String peerToPeer(@PathVariable("task") String task){
+        rabbitTemplate.convertAndSend(DirectRabbitConfig.PEER_TO_PEER_QUEUE,task);
+        return "ok";
+
+    }
+
+
+    /**
+     * 【工作队列模式】
      * @param task 消息内容
      **/
     @PostMapping("/work/{task}")
     public String sendWorkMessage(@PathVariable("task") String task){
 
-        rabbitTemplate.convertAndSend(DirectRabbitConfig.MY_DIRECT_EXCHANGE,DirectRabbitConfig.ROUTING_KEY_ONE,task);
+        rabbitTemplate.convertAndSend(DirectRabbitConfig.WORK_QUEUE,task);
         return "ok";
 
     }
 
     /**
-     * 【Direct】
+     * 【Direct路由模式】
      * @param message 消息内容
      **/
     @PostMapping("/direct/{message}")
@@ -48,7 +60,7 @@ public class Producer {
     }
 
     /**
-     * 【Fanout】
+     * 【Fanout发布订阅模式】
      * @param message 消息内容
      **/
     @PostMapping("/fanout/{message}")
@@ -65,18 +77,19 @@ public class Producer {
     }
 
     /**
-     * 【Topic】
+     * 【Topic通配符模式】
      * @param message 消息内容
      **/
     @PostMapping("/topic/{message}")
     public String sendTopicMessage(@PathVariable("message") String message) {
 
         Map<String, Object> map = new HashMap<>();
-        map.put("messageId", String.valueOf(UUID.randomUUID()));
-        map.put("messageData", message + "TEST1");
 
         /* 直接跟交换机MY_FANOUT_EXCHANGE交互 */
         rabbitTemplate.setExchange(DirectRabbitConfig.MY_TOPIC_EXCHANGE);
+
+        map.put("messageId", String.valueOf(UUID.randomUUID()));
+        map.put("messageData", message + "TEST1");
         rabbitTemplate.convertAndSend(DirectRabbitConfig.TOPIC_ROUTING_KEY_ONE,map);
 
         map.put("messageId", String.valueOf(UUID.randomUUID()));

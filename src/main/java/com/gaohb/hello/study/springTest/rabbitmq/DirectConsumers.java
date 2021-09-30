@@ -25,10 +25,10 @@ public class DirectConsumers extends Base {
         logger.debug("Direct消费者[2]收到消息  : " + testMessage.toString());
     }
 
-//    @RabbitListener(queues = DirectRabbitConfig.DIRECT_QUEUE_THREE)
-//    public void consumer3(Object testMessage) {
-//        logger.debug("Direct消费者[3]收到消息  : " + testMessage.toString());
-//    }
+    @RabbitListener(queues = DirectRabbitConfig.DIRECT_QUEUE_ONE)
+    public void consumer3(Object testMessage) {
+        logger.debug("Direct消费者[3]收到消息  : " + testMessage.toString());
+    }
 
     @RabbitListener(queues = DirectRabbitConfig.DIRECT_QUEUE_THREE)
     public void consumerAck(Channel channel, Message message) {
