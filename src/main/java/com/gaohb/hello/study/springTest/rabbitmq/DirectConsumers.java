@@ -2,35 +2,33 @@ package com.gaohb.hello.study.springTest.rabbitmq;
 
 
 import com.gaohb.hello.study.config.base.Base;
-import com.gaohb.hello.study.config.rabbitmq.DirectRabbitConfig;
+import com.gaohb.hello.study.config.rabbitmq.RabbitConfig;
 import com.rabbitmq.client.Channel;
 import org.springframework.amqp.core.Message;
-import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
-import java.util.Map;
 
-@Component
+//@Component
 public class DirectConsumers extends Base {
 
-    @RabbitListener(queues = DirectRabbitConfig.DIRECT_QUEUE_ONE)
+    @RabbitListener(queues = RabbitConfig.DIRECT_QUEUE_ONE)
     public void consumer1(Object testMessage) {
         logger.debug("Direct消费者[1]收到消息  : " + testMessage.toString());
     }
 
-    @RabbitListener(queues = DirectRabbitConfig.DIRECT_QUEUE_TWO)
+    @RabbitListener(queues = RabbitConfig.DIRECT_QUEUE_TWO)
     public void consumer2(Object testMessage) {
         logger.debug("Direct消费者[2]收到消息  : " + testMessage.toString());
     }
 
-    @RabbitListener(queues = DirectRabbitConfig.DIRECT_QUEUE_ONE)
+    @RabbitListener(queues = RabbitConfig.DIRECT_QUEUE_ONE)
     public void consumer3(Object testMessage) {
         logger.debug("Direct消费者[3]收到消息  : " + testMessage.toString());
     }
 
-    @RabbitListener(queues = DirectRabbitConfig.DIRECT_QUEUE_THREE)
+    @RabbitListener(queues = RabbitConfig.DIRECT_QUEUE_THREE)
     public void consumerAck(Channel channel, Message message) {
         try{
             logger.debug("Direct消费者[ACK]收到消息  : " + message.toString());

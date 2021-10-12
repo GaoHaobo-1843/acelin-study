@@ -5,8 +5,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 
-@Configuration
-public class DirectRabbitConfig {
+//@Configuration
+public class RabbitConfig {
 
     public static final String MY_DIRECT_EXCHANGE = "myDirectExchange";              // Direct交换机名称
     public static final String MY_FANOUT_EXCHANGE = "myFanoutExchange";              // Fanout交换机名称

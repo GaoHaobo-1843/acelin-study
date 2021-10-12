@@ -1,13 +1,11 @@
 package com.gaohb.hello.study.springTest.rabbitmq;
 
 
-import com.gaohb.hello.study.config.rabbitmq.DirectRabbitConfig;
+import com.gaohb.hello.study.config.rabbitmq.RabbitConfig;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -25,7 +23,7 @@ public class Producer {
      **/
     @PostMapping("/peer-to-peer/{task}")
     public String peerToPeer(@PathVariable("task") String task){
-        rabbitTemplate.convertAndSend(DirectRabbitConfig.PEER_TO_PEER_QUEUE,task);
+        rabbitTemplate.convertAndSend(RabbitConfig.PEER_TO_PEER_QUEUE,task);
         return "ok";
 
     }
@@ -38,7 +36,7 @@ public class Producer {
     @PostMapping("/work/{task}")
     public String sendWorkMessage(@PathVariable("task") String task){
 
-        rabbitTemplate.convertAndSend(DirectRabbitConfig.WORK_QUEUE,task);
+        rabbitTemplate.convertAndSend(RabbitConfig.WORK_QUEUE,task);
         return "ok";
 
     }
@@ -55,7 +53,7 @@ public class Producer {
         map.put("messageData", message);
 
         /* 设置路由标识MY_ROUTING_KEY，发送到交换机MY_DIRECT_EXCHANGE */
-        rabbitTemplate.convertAndSend(DirectRabbitConfig.MY_DIRECT_EXCHANGE,DirectRabbitConfig.ROUTING_KEY_ONE, map);
+        rabbitTemplate.convertAndSend(RabbitConfig.MY_DIRECT_EXCHANGE, RabbitConfig.ROUTING_KEY_ONE, map);
         return "ok";
     }
 
@@ -71,7 +69,7 @@ public class Producer {
         map.put("messageData", message);
 
         /* 直接跟交换机MY_FANOUT_EXCHANGE交互 */
-        rabbitTemplate.setExchange(DirectRabbitConfig.MY_FANOUT_EXCHANGE);
+        rabbitTemplate.setExchange(RabbitConfig.MY_FANOUT_EXCHANGE);
         rabbitTemplate.convertAndSend(map);
         return "ok";
     }
@@ -86,19 +84,19 @@ public class Producer {
         Map<String, Object> map = new HashMap<>();
 
         /* 直接跟交换机MY_FANOUT_EXCHANGE交互 */
-        rabbitTemplate.setExchange(DirectRabbitConfig.MY_TOPIC_EXCHANGE);
+        rabbitTemplate.setExchange(RabbitConfig.MY_TOPIC_EXCHANGE);
 
         map.put("messageId", String.valueOf(UUID.randomUUID()));
         map.put("messageData", message + "TEST1");
-        rabbitTemplate.convertAndSend(DirectRabbitConfig.TOPIC_ROUTING_KEY_ONE,map);
+        rabbitTemplate.convertAndSend(RabbitConfig.TOPIC_ROUTING_KEY_ONE,map);
 
         map.put("messageId", String.valueOf(UUID.randomUUID()));
         map.put("messageData", message + "TEST2");
-        rabbitTemplate.convertAndSend(DirectRabbitConfig.TOPIC_ROUTING_KEY_TWO,map);
+        rabbitTemplate.convertAndSend(RabbitConfig.TOPIC_ROUTING_KEY_TWO,map);
 
         map.put("messageId", String.valueOf(UUID.randomUUID()));
         map.put("messageData", message + "TEST3");
-        rabbitTemplate.convertAndSend(DirectRabbitConfig.TOPIC_ROUTING_KEY_THREE,map);
+        rabbitTemplate.convertAndSend(RabbitConfig.TOPIC_ROUTING_KEY_THREE,map);
 
         return "ok";
     }
@@ -116,7 +114,7 @@ public class Producer {
         map.put("messageData", message);
 
         /* 设置路由标识MY_ROUTING_KEY，发送到交换机MY_DIRECT_EXCHANGE */
-        rabbitTemplate.convertAndSend(DirectRabbitConfig.MY_DIRECT_EXCHANGE,DirectRabbitConfig.ROUTING_KEY_ACK, map);
+        rabbitTemplate.convertAndSend(RabbitConfig.MY_DIRECT_EXCHANGE, RabbitConfig.ROUTING_KEY_ACK, map);
         return "ok";
     }
 }
