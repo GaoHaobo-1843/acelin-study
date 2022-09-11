@@ -1,9 +1,6 @@
 package com.gaohb.hello.study.test.commonIOTraning;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -187,6 +184,44 @@ public class IOTest {
             }
         }
         System.out.println(i);
+    }
+
+
+    /**
+     * @Author: gaohb
+     * @Description //TODO 统计个数
+     * @Date: 2022/2/24
+     **/
+    public void calNum(){
+
+        File file = new File("");
+
+        try{
+            FileReader fileReader = new FileReader(file);
+
+            BufferedReader bufferedReader = null;
+
+            try{
+                bufferedReader = new BufferedReader(fileReader);
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+
+            StringBuffer stringBuffer = new StringBuffer();
+            String line = null;
+            try{
+                while ((line = bufferedReader.readLine()) != null){
+                    stringBuffer.append(line);
+                }
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+
+
+
+        }catch (Exception e){
+
+        }
     }
 
 

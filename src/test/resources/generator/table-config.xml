@@ -20,10 +20,18 @@
 <!--                        password="Sitech#2019">-->
 <!--        </jdbcConnection>-->
 
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://172.18.233.159:8066/acctdb?useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8"
-                        userId="point"
-                        password="abc123">
+<!--        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"-->
+<!--                        connectionURL="jdbc:mysql://172.18.233.159:8066/ecop_dev?characterEncoding=UTF-8"-->
+<!--                        userId="dbaccfam_dev"-->
+<!--                        password="dbaccfam_dev">-->
+<!--            &lt;!&ndash;解决mysql驱动升级到8.0后不生成指定数据库代码的问题&ndash;&gt;-->
+<!--            <property name="nullCatalogMeansCurrent" value="true" />-->
+<!--        </jdbcConnection>-->
+
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/acelin?useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8"
+                        userId="root"
+                        password="ghbdb456$%^">
         </jdbcConnection>
 
         <javaModelGenerator targetPackage="${targetModelPackage}" targetProject="${targetJavaProject}"/>
@@ -37,7 +45,8 @@
      <!-- 需要生成的表 -->
         <!--<table tableName="BAL_WLWINVRECORD_INFO" ></table>-->
 <!--        <table tableName="bal_batchadj_his" schema="dbaccopr"></table>-->
-        <table tableName="bal_invprint_202101" ></table>
+        <table tableName="wpaynetlog" >
+        </table>
 
 
 

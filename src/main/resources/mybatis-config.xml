@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--配置的插件名-->
+    <plugins>
+        <plugin interceptor="com.gaohb.hello.study.basemapper.MyBatisInterceptor"/>
+<!--            &lt;!&ndash;【全局配置】设置最大返回行数，超过会熔断sql&ndash;&gt;-->
+<!--            <property name="maxRowNum" value="1000"/>-->
+<!--            &lt;!&ndash;【全局配置】设置超时提醒时间（单位：微秒），超过会打印error日志提醒超时（不会终止）&ndash;&gt;-->
+<!--            <property name="warnTime" value="1000"/>-->
+<!--            &lt;!&ndash;【模型级配置】设置查询该模型时，至少包含以下条件之一，否则抛出异常（*任意条件）&ndash;&gt;-->
+<!--            <property name="ur_user_info" value="id_no,contract_no,cust_id,phone_no"/>-->
+<!--            <property name="cs_userdetail_info" value="*"/>-->
+<!--            <property name="in_msgsend_info" value="object_id"/>-->
+<!--        </plugin>-->
+    </plugins>
+</configuration>

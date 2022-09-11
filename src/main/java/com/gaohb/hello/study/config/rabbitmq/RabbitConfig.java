@@ -37,7 +37,7 @@ public class RabbitConfig {
     /* 声明队列（告诉服务器给我创建一个新的队列） */
 
     /******************************* Peer-to-peer ******************************/
-    @Bean
+
     public Queue peer2peerQueue() {
         return new Queue(PEER_TO_PEER_QUEUE,true);
     }
@@ -49,12 +49,11 @@ public class RabbitConfig {
     }
 
     /******************************* Direct ******************************/
-    @Bean
+
     public Queue directQueueOne() {
         return new Queue(DIRECT_QUEUE_ONE,true);
     }
 
-    @Bean
     public Queue directQueueTwo() {
         return new Queue(DIRECT_QUEUE_TWO,true);
     }
@@ -64,7 +63,7 @@ public class RabbitConfig {
         return new Queue(DIRECT_QUEUE_THREE,true);
     }
 
-    @Bean
+
     public DirectExchange directExchange() {
           return new DirectExchange(MY_DIRECT_EXCHANGE,true,false);
     }
@@ -85,17 +84,17 @@ public class RabbitConfig {
 //    }
     /******************************* Fanout ******************************/
 
-    @Bean
+
     public Queue fanoutQueueOne() {
         return new Queue(FANOUT_QUEUE_ONE,true);
     }
 
-    @Bean
+
     public Queue fanoutQueueTwo() {
         return new Queue(FANOUT_QUEUE_TWO,true);
     }
 
-    @Bean
+
     public FanoutExchange fanoutExchange(){
         return new FanoutExchange(MY_FANOUT_EXCHANGE,true,false);
     }
@@ -113,17 +112,16 @@ public class RabbitConfig {
 
     /******************************* Topic ******************************/
 
-    @Bean
+
     public Queue topicQueueOne() {
         return new Queue(TOPIC_QUEUE_ONE,true);
     }
 
-    @Bean
     public Queue topicQueueTwo() {
         return new Queue(TOPIC_QUEUE_TWO,true);
     }
 
-    @Bean
+
     public TopicExchange topicExchange() {
         return new TopicExchange(MY_TOPIC_EXCHANGE,true,false);
     }

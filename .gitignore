@@ -13,6 +13,5 @@ target/
 build/
 .project
 .classpath
-source/com/sitech/acctmgr/mytest/
 
 

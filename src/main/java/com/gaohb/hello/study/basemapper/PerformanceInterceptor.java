@@ -11,6 +11,7 @@
  ***************************************************************************/
 package com.gaohb.hello.study.basemapper;
 
+import org.apache.ibatis.executor.Executor;
 import org.apache.ibatis.mapping.BoundSql;
 import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.mapping.ParameterMapping;
@@ -29,7 +30,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Properties;
-import java.util.concurrent.Executor;
 
 /**
  * MyBatis 性能拦截器，用于输出每条 SQL 语句及其执行时间.
