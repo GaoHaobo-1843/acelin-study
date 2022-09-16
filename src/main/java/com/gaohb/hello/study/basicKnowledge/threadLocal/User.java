@@ -1,6 +1,5 @@
-package com.gaohb.hello.study.springTest.threadlocal;
+package com.gaohb.hello.study.basicKnowledge.threadLocal;
 
-import com.gaohb.hello.study.springTest.cache.LocalData;
 import lombok.Data;
 
 import java.time.LocalDate;
@@ -15,7 +14,7 @@ import java.time.LocalDate;
  */
 
 @Data
-public class User extends LocalData {
+public class User {
     private Integer userId;
     private String name;
     private LocalDate birthday;

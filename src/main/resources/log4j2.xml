@@ -225,7 +225,7 @@
         <logger name="com.zaxxer.hikari" level="error"/>
         <!-- 限制最低日志级别，只会在该级别之上才会显示 -->
         <root level="debug">
-            <appender-ref ref="Console" level="debug"/>
+            <appender-ref ref="Console" level="info"/>
             <appender-ref ref="Filelog"/>
             <appender-ref ref="RollingFileInfo"/>
             <appender-ref ref="RollingFileWarn"/>

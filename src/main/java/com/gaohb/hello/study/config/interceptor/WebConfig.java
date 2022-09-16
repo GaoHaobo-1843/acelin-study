@@ -22,13 +22,13 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
 
-        /* 注册，拦截器的执行顺序取决与注册顺序 */
-        registry.addInterceptor(firstInterceptor)
-                .addPathPatterns("/**") //设置会被该拦截器拦截的请求路径  /** 表示所有
-                .excludePathPatterns("/mybatis/test"); //设置该拦截器不会拦截的请求路径
-        registry.addInterceptor(secondInterceptor)
-                .addPathPatterns("/**")
-                .excludePathPatterns("/mybatis/hello"); //设置该拦截器不会拦截的请求路径
+//        /* 注册，拦截器的执行顺序取决与注册顺序 */
+//        registry.addInterceptor(firstInterceptor)
+//                .addPathPatterns("/**") //设置会被该拦截器拦截的请求路径  /** 表示所有
+//                .excludePathPatterns("/mybatis/test"); //设置该拦截器不会拦截的请求路径
+//        registry.addInterceptor(secondInterceptor)
+//                .addPathPatterns("/**")
+//                .excludePathPatterns("/mybatis/hello"); //设置该拦截器不会拦截的请求路径
     }
 
 }

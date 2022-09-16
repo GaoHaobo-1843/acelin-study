@@ -1,7 +1,6 @@
 package com.gaohb.hello.study.config.test;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.PropertySource;
 
 import java.time.Duration;
 import java.util.List;

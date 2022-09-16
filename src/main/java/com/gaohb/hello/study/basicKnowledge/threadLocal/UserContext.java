@@ -1,4 +1,4 @@
-package com.gaohb.hello.study.springTest.threadlocal;
+package com.gaohb.hello.study.basicKnowledge.threadLocal;
 
 /**
  * <Description><br>

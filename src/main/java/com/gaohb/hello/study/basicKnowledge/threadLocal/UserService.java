@@ -1,6 +1,4 @@
-package com.gaohb.hello.study.springTest.threadlocal;
-
-import org.springframework.stereotype.Service;
+package com.gaohb.hello.study.basicKnowledge.threadLocal;
 
 /**
  * <Description><br>
@@ -10,15 +8,12 @@ import org.springframework.stereotype.Service;
  * @see com.gaohb.hello.study.basicKnowledge.threadLocal <br>
  * @since R9.0<br>
  */
-
-@Service
 public class UserService {
 
     /**
      * 执行添加用户
      */
     public void addUser() {
-
         System.out.println(Thread.currentThread().getName() + "添加用户信息:" + UserContext.get());
     }
 
