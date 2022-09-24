@@ -1,0 +1,21 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092 #,localhost:9093,localhost:9094
+    producer:
+      batch-size: 16384 #16k
+      buffer-memory: 33554432
+      retries: 3 # 设置大于0，生产者将会把发送给broker失败的消息进行重试
+      acks: 1
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      security:
+        protocol: SASL_PLAINTEXT
+    consumer:
+      group-id: default-group
+      enable-auto-commit: false #关闭自动应答
+      auto-offset-reset: earliest
+      max-poll-records: 500
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    listener:
+      ack-mode: manual_immediate
