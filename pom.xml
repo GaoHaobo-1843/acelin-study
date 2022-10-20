@@ -28,6 +28,23 @@
         <targetMapperPackage>com.gaohb.hello.study.tmp</targetMapperPackage>
         <targetModelPackage>com.gaohb.hello.study.tmp</targetModelPackage>
 
+        <springfox-swagger2.version>2.10.5</springfox-swagger2.version>
+        <swagger.version>1.6.1</swagger.version>
+
+        <mybatis-boot.version>2.2.0</mybatis-boot.version>
+        <mybatis.version>3.5.8</mybatis.version>
+        <mapper-boot.version>2.1.5</mapper-boot.version>
+        <mapper.version>1.1.5</mapper.version>
+        <pagehelper-boot.version>1.4.1</pagehelper-boot.version>
+        <pagehelper.version>5.3.0</pagehelper.version>
+        <persistence.version>1.0</persistence.version>
+        <mybatis-plus.version>3.4.1</mybatis-plus.version>
+
+        <commons-io.version>2.7</commons-io.version>
+
+        <druid.version>1.2.4</druid.version>
+
+
     </properties>
 
     <dependencies>
@@ -102,25 +119,25 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- mybatis -->
+<!--        &lt;!&ndash; mybatis &ndash;&gt;-->
+<!--&lt;!&ndash;        <dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;            <groupId>org.mybatis</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;            <artifactId>mybatis</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;            <version>3.5.2</version>&ndash;&gt;-->
+<!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+
+<!--        &lt;!&ndash; tk.mybatis &ndash;&gt;-->
 <!--        <dependency>-->
-<!--            <groupId>org.mybatis</groupId>-->
-<!--            <artifactId>mybatis</artifactId>-->
-<!--            <version>3.5.2</version>-->
+<!--            <groupId>tk.mybatis</groupId>-->
+<!--            <artifactId>mapper</artifactId>-->
+<!--            <version>4.1.5</version>-->
 <!--        </dependency>-->
 
-        <!-- tk.mybatis -->
-        <dependency>
-            <groupId>tk.mybatis</groupId>
-            <artifactId>mapper</artifactId>
-            <version>4.1.5</version>
-        </dependency>
-
-        <dependency>
-            <groupId>tk.mybatis</groupId>
-            <artifactId>mapper-spring-boot-starter</artifactId>
-            <version>2.1.5</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>tk.mybatis</groupId>-->
+<!--            <artifactId>mapper-spring-boot-starter</artifactId>-->
+<!--            <version>2.1.5</version>-->
+<!--        </dependency>-->
 
 <!--        &lt;!&ndash; rabbitmq &ndash;&gt;-->
 <!--        <dependency>-->
@@ -149,6 +166,12 @@
         </dependency>
 
         <!-- mysql -->
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>${druid.version}</version>
+        </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -178,51 +201,138 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- swagger start -->
+        <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>${swagger.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${springfox-swagger2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${springfox-swagger2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-spring-webmvc</artifactId>
+            <version>${springfox-swagger2.version}</version>
+        </dependency>
+        <!-- swagger end -->
+
+
+        <!-- mybatis start -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>${mybatis-boot.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-to-slf4j</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>${mybatis.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper-spring-boot-starter</artifactId>
+            <version>${mapper-boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper-core</artifactId>
+            <version>${mapper.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>${pagehelper-boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>${pagehelper.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>persistence-api</artifactId>
+            <version>${persistence.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>${mybatis-plus.version}</version>
+        </dependency>
+        <!-- mybatis end -->
+
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io.version}</version>
+        </dependency>
+
 
     </dependencies>
 
-    <build>
-        <plugins>
-            <!-- mapper自动生成插件 -->
-            <plugin>
-                <groupId>org.mybatis.generator</groupId>
-                <artifactId>mybatis-generator-maven-plugin</artifactId>
-                <version>${mybatis-generator-maven-plugin.version}</version>
-                <configuration>
-                    <configurationFile>${configurationFile}</configurationFile>
-                    <overwrite>true</overwrite>
-                    <verbose>true</verbose>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>mysql</groupId>
-                        <artifactId>mysql-connector-java</artifactId>
-                        <version>${mysql-connector-java.version}</version>
-                    </dependency>
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            &lt;!&ndash; mapper自动生成插件 &ndash;&gt;-->
+<!--            <plugin>-->
+<!--                <groupId>org.mybatis.generator</groupId>-->
+<!--                <artifactId>mybatis-generator-maven-plugin</artifactId>-->
+<!--                <version>${mybatis-generator-maven-plugin.version}</version>-->
+<!--                <configuration>-->
+<!--                    <configurationFile>${configurationFile}</configurationFile>-->
+<!--                    <overwrite>true</overwrite>-->
+<!--                    <verbose>true</verbose>-->
+<!--                </configuration>-->
+<!--                <dependencies>-->
 <!--                    <dependency>-->
-<!--                        <groupId>com.hynnet</groupId>-->
-<!--                        <artifactId>oracle-driver-ojdbc6</artifactId>-->
-<!--                        <version>12.1.0.1</version>-->
+<!--                        <groupId>mysql</groupId>-->
+<!--                        <artifactId>mysql-connector-java</artifactId>-->
+<!--                        <version>${mysql-connector-java.version}</version>-->
 <!--                    </dependency>-->
-                    <dependency>
-                        <groupId>tk.mybatis</groupId>
-                        <artifactId>mapper</artifactId>
-                        <version>${mapper.version}</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-        </plugins>
-    </build>
+<!--&lt;!&ndash;                    <dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <groupId>com.hynnet</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <artifactId>oracle-driver-ojdbc6</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <version>12.1.0.1</version>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </dependency>&ndash;&gt;-->
+<!--                    <dependency>-->
+<!--                        <groupId>tk.mybatis</groupId>-->
+<!--                        <artifactId>mapper</artifactId>-->
+<!--                        <version>${mapper.version}</version>-->
+<!--                    </dependency>-->
+<!--                </dependencies>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
 
-   <!-- mybatis 逆向生成配置文件 -->
-    <profiles>
-        <profile>
-            <id>table</id>
-            <properties>
-                <mapper.mapper>com.gaohb.hello.study.basemapper.TableMapper</mapper.mapper>
-                <configurationFile>src/test/resources/generator/table-config.xml</configurationFile>
-            </properties>
-        </profile>
-    </profiles>
+<!--   &lt;!&ndash; mybatis 逆向生成配置文件 &ndash;&gt;-->
+<!--    <profiles>-->
+<!--        <profile>-->
+<!--            <id>table</id>-->
+<!--            <properties>-->
+<!--                <mapper.mapper>com.gaohb.hello.study.basemapper.TableMapper</mapper.mapper>-->
+<!--                <configurationFile>src/test/resources/generator/table-config.xml</configurationFile>-->
+<!--            </properties>-->
+<!--        </profile>-->
+<!--    </profiles>-->
 
 </project>
